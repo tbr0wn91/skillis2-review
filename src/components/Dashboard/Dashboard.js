@@ -25,10 +25,14 @@ import Product from "../Product/Product";
 
 
     render(){
+        const { inventory } = this.props;
+        const mappedInventory = inventory.map(product => {
+            return <Product product={product} />
+        })
         return (
             <div>
                 Dashboard
-                <Product />
+                {mappedInventory}
             </div>
         )
     }
