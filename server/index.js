@@ -2,6 +2,7 @@ const express = require('express');
 const massive = require('massive');
 require('dotenv').config();
 const app = express();
+const controller = require('./controller');
 
 app.use(express.json());
 
@@ -10,6 +11,8 @@ massive(process.env.CONNECTION_STRING).then(db => {
     console.log(`Connected to db`)
 })
 
+
+app.get('/api/inventory', controller.getInventory);
 
 
 const PORT = 4020;
