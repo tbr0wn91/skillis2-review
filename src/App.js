@@ -22,7 +22,9 @@ import './App.css';
 
  getInventory = () => {
   axios.get('/api/inventory').then(res => {
-    console.log(res)
+    this.setState({
+      inventory: res.data
+    })
   })
 
  }

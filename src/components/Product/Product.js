@@ -6,7 +6,7 @@ export default function (props) {
    return (
        <div>
            {product.name}
-           <img src={product.imgUrl} />
+           <img src={product.imgurl} />
            {product.price}
 
 

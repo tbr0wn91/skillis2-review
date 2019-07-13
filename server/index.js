@@ -13,6 +13,7 @@ massive(process.env.CONNECTION_STRING).then(db => {
 
 
 app.get('/api/inventory', controller.getInventory);
+app.post('/api/')
 
 
 const PORT = 4020;
